@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game >
+    <frame title="Java俄罗斯方块" windowUp="32" width="1200" height="750" padding="16" border="0" >
+   		<background imageWidth="640" imageHeight="320"/>
+        <photograph actSize="32" sizeRol="5" boximage="64" />
+   		<gameMap width="10" height="18"/>
+        <layer className="ui.LayerBackground" x="128" y="64" w="224" h="256"/>
+        <layer className="ui.LayerDataBase" x="128" y="64" w="224" h="256"/>
+        <layer className="ui.LayerDisk" x="128" y="384" w="224" h="256"/>
+        <layer className="ui.LayerGame" x="430" y="64" w="320" h="576"/>
+        <layer className="ui.LayerButton" x="796" y="64" w="270" h="96"/>
+        <layer className="ui.LayerNext" x="796" y="212" w="175" h="96"/>
+        <layer className="ui.LayerLevel" x="983" y="212" w="83" h="96"/>
+        <layer className="ui.LayerPoint" x="796" y="350" w="270" h="160"/>
+        <layer className="ui.LayerAbout" x="796" y="544" w="270" h="96"/>
+    </frame>
+    <!--
+	private static int MIN_X=0;
+	private static int MAX_X=9;
+	private static int MIN_Y=0;
+	private static int MAX_Y=17; 
+     -->
+    <system>
+        <rect>
+            <Point x="4" y="0"/><Point x="3" y="0"/><Point x="5" y="0"/><Point x="6" y="0"/>
+        </rect>
+        <rect>
+            <Point x="4" y="0"/><Point x="3" y="0"/><Point x="5" y="0"/><Point x="4" y="1"/>
+        </rect>
+        <rect>
+            <Point x="4" y="0"/><Point x="3" y="0"/><Point x="5" y="0"/><Point x="3" y="1"/>
+        </rect>
+        <rect>
+            <Point x="4" y="0"/><Point x="3" y="1"/><Point x="5" y="0"/><Point x="4" y="1"/>
+        </rect>
+        <rect>
+            <Point x="4" y="0"/><Point x="3" y="1"/><Point x="5" y="0"/><Point x="5" y="1"/>
+        </rect>
+        <rect>
+            <Point x="4" y="0"/><Point x="3" y="0"/><Point x="5" y="0"/><Point x="5" y="1"/>
+        </rect>
+        <rect>
+            <Point x="4" y="0"/><Point x="3" y="0"/><Point x="4" y="1"/><Point x="5" y="1"/>
+        </rect>
+    </system>
+    <data maxRow="5" >
+        <dataA className="dao.DataBase">
+            <param key="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <param key="dbUrl" value="jdbc:sqlserver://172.16.94.37:1433;database=tetris"/>
+            <param key="dbUser" value="gm"/>
+            <param key="dbPwd" value="231231"/>
+            <param key="" value=""/>
+        </dataA>
+        <dataB className="dao.DataDisk">
+            <param key="path" value=""/>
+        </dataB>
+    </data>
+</game>
